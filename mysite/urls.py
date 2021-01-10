@@ -9,7 +9,7 @@ from mysite.core import views
 urlpatterns = [
     path('', views.Home.as_view(), name='home'),
     path('upload/', views.upload, name='upload'),
-
+    path('about/', views.about, name='about'),
     path('admin/', admin.site.urls),
 ]
 

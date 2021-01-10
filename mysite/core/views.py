@@ -20,7 +20,9 @@ def upload(request):
         context['name'] = uploaded_file.name
     return render(request, 'upload.html', context)
 
-
+def about(request):
+    return render(request, 'about.html', {})
+    
 # def book_list(request):
 #     books = Book.objects.all()
 #     return render(request, 'book_list.html', {
