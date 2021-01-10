@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<p style="background-color: #edf2f4;">
   <h2>Upload</h2>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
@@ -10,4 +11,5 @@
   {% if name %}
     <p>Uploaded file: {{ name }}</p>
   {% endif %}
+</p>
 {% endblock %}
