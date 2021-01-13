@@ -7,10 +7,10 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
   <title>{% block title %}Document Classification{% endblock %}</title>
 </head>
-<body style="background-color: #8d99ae;">
-  <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color:#ef233c;color: white;">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light mb-4">
     <div class="container">
-      <a class="navbar-brand" href="{% url 'home' %}">My Site</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Document Classification</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,7 +29,7 @@
       </div>
     </div>
   </nav>
-  <div class="container" style="background-color: #edf2f4;">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10 col-md-12">
         <div class="card mb-4">
