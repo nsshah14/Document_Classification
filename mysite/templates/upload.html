@@ -3,13 +3,11 @@
 {% block content %}
 <p style="background-color: #edf2f4;">
   <h2>Upload</h2>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="file" name="document">
-    <button type="submit">Upload file</button>
+  <form action="upload/" method="POST" class="dropzone dz" id="my-dropzone">
+      {% csrf_token %}
+      <div class="fallback">
+        <input name="file" type="file" multiple />
+      </div>
   </form>
-  {% if name %}
-    <p>Uploaded file: {{ name }}</p>
-  {% endif %}
 </p>
 {% endblock %}

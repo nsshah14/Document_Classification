@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, ListView, CreateView
 from django.core.files.storage import FileSystemStorage
 from django.urls import reverse_lazy
-
+from .models import Doc
 # from .forms import BookForm
 # from .models import Book
 
@@ -12,13 +12,10 @@ class Home(TemplateView):
 
 
 def upload(request):
-    context = {}
     if request.method == 'POST':
-        uploaded_file = request.FILES['document']
-        # fs = FileSystemStorage()
-        # name = fs.save(uploaded_file.name, uploaded_file)
-        context['name'] = uploaded_file.name
-    return render(request, 'upload.html', context)
+        my_file=request.FILES.get('file')
+        Doc.objects.create(upload=my_file)
+    return render(request, 'upload.html', {})
 
 def about(request):
     return render(request, 'about.html', {})
