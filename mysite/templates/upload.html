@@ -3,7 +3,7 @@
 {% block content %}
 <p style="background-color: #edf2f4;">
   <h2>Upload</h2>
-  <form action="upload/" method="POST" class="dropzone dz" id="my-dropzone">
+  <form action="upload-success/" method="POST" class="dropzone dz" id="my-dropzone">
       {% csrf_token %}
       <div class="fallback">
         <input name="file" type="file" multiple />

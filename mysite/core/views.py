@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, ListView, CreateView
-from django.core.files.storage import FileSystemStorage
+#from django.core.files.storage import FileSystemStorage
+from django.http import HttpResponse,JsonResponse
 from django.urls import reverse_lazy
 from .models import Doc
 # from .forms import BookForm
@@ -12,13 +13,19 @@ class Home(TemplateView):
 
 
 def upload(request):
-    if request.method == 'POST':
-        my_file=request.FILES.get('file')
-        Doc.objects.create(upload=my_file)
     return render(request, 'upload.html', {})
 
 def about(request):
     return render(request, 'about.html', {})
+    
+def file_upload_view(request):
+    if request.method == "POST":
+        #my_file=request.FILES.get('file')
+        #Doc.objects.create(upload="myfile")
+        print(request.FILES)
+        return HttpResponse('')
+    else:
+        return JsonResponse({'post':'false'})
     
 # def book_list(request):
 #     books = Book.objects.all()

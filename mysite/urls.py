@@ -11,7 +11,7 @@ urlpatterns = [
     path('upload/', views.upload, name='upload'),
     path('about/', views.about, name='about'),
     path('admin/', admin.site.urls),
-    
+    path('upload/upload-success/',views.file_upload_view,name="upload-success")
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
