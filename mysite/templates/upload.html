@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <p style="background-color: #edf2f4;">
   <h2>Upload</h2>
@@ -9,5 +9,8 @@
         <input name="file" type="file" multiple />
       </div>
   </form>
+  <div class="text-center">
+    <input type="button" id="uploadfiles" value="Upload Files" class="btn btn-primary">
+  </div>
 </p>
 {% endblock %}
