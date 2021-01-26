@@ -8,7 +8,7 @@
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/sibtc/django-upload-example.git
+git clone https://github.com/freakNewton/Document_Classification.git
 ```
 
 Install the requirements:
