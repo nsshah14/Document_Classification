@@ -3,14 +3,18 @@
 {% block content %}
 <p style="background-color: #edf2f4;">
   <h2>Upload</h2>
-  <form action="upload-success/" method="POST" class="dropzone dz" id="my-dropzone">
-      {% csrf_token %}
-      <div class="fallback">
-        <input name="file" type="file" multiple />
+  <form action="upload-success/" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+      <div id="my-dropzone"  class="dropzone dz">
+        {% csrf_token %}
+        <div class="fallback">
+          <input name="file" type="file" multiple />
+        </div>
+      </div>
+      <div class="text-center">
+        <input type="button" id="uploadfiles" value="Upload Files" class="btn btn-primary">
       </div>
   </form>
-  <div class="text-center">
-    <input type="button" id="uploadfiles" value="Upload Files" class="btn btn-primary">
-  </div>
 </p>
 {% endblock %}
+
