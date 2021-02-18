@@ -23,7 +23,7 @@ def file_upload_view(request):
         #my_file=request.FILES.get('file')
         #Doc.objects.create(upload="myfile")
         files = request.FILES.getlist('file')
-        print(len(files))
+        print(files)
         return HttpResponse('')
     else:
         return JsonResponse({'post':'false'})

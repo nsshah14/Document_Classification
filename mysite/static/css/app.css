@@ -1,9 +1,12 @@
-/*body {
-  background-color: #5c848e;
+body {
+  background-color: #75e6da ;
 }
 .navbar {
-  background-color: #decdc3;
-}*/
+  background-color: #05445e;
+}
+.navbar .container a, .navbar .container .navbar-collapse ul li a{
+  color: #d4f1f4;
+}
 
 .dz{
   border: dashed !important;
